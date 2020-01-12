@@ -1,5 +1,6 @@
 theme: jekyll-theme-cayman
 title: "Hello Meow"
+title-heading: false
 description: homepage
 github:
   is_project_page: false
