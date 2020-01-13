@@ -1,0 +1,37 @@
+資料公開日,タイトル ,リンク,公開者,公開者プロフィールリンク,公開者の(公開時点の)所属,何のイベントで公開されたか
+2019/7/13,What we need for?MLOps,https://speakerdeck.com/keigohtr/what-we-need-for-mlops,服部圭悟(Keigo Hattori),https://twitter.com/keigohtr,ABEJA,CCSE 2019
+2019/7/13,JapanTaxiにおけるML Ops ?機械学習の開発運用プロセス?,https://www.slideshare.net/tetsutarowatanabe/japantaximl-ops,渡部徹太郎(Tetsutaro Watanabe),https://twitter.com/fetarodc,JapanTaxi,CCSE 2019
+2019/7/13,メルカリの写真検索を支えるバックエンド CCSE 2019 version,https://speakerdeck.com/hnakagawa/merukarifalsexie-zhen-jian-suo-wozhi-erubatukuendo-ccse-2019-version,中河 宏文(Hirofumi Nakagawa),https://twitter.com/hnakagawa14,メルカリ,CCSE 2019
+2019/6/29,開発者向けの基盤をつくる,https://speakerdeck.com/tcnksm/kai-fa-zhe-xiang-kefalseji-pan-wotukuru,Taichi Nakashima,https://twitter.com/deeeet,メルカリ,ハッカーズチャンプルー2019
+2019/6/27,自由と統制のバランス　分析基盤のアプローチ,https://speakerdeck.com/ryoji_hasegawa/zi-you-totong-zhi-falsebaransu-fen-xi-ji-pan-falseapuroti,Ryoji Hasegawa,,DeNA,DPCT#3
+2019/6/26,機械学習をサービスに導入するノウハウ - Yahoo! JAPAN Tech Blog,https://techblog.yahoo.co.jp/entry/20190626686917/,山本康生,,Yahoo! JAPAN,
+2019/6/24,クックパッドにおける推薦（と検索）の取り組み,https://speakerdeck.com/chie8842/kutukupatudoniokerutui-jian-tojian-suo-falsequ-rizu-mi,林田千瑛,https://twitter.com/chie8842,クックパッド,MLPP#3
+2019/6/5,データ分析基盤Crois,https://www.rco.recruit.co.jp/career/engineer/blog/mlct_10_crois/,宮井康宏,https://twitter.com/mia_0032,リクルートコミュニケーションズ,MLCT#10
+2019/5/30,つらくないAirflowにむけて,https://speakerdeck.com/line_developers/toward-airflow-without-pain,Kenji Yamauchi,,LINE,MLPP#2
+2019/5/30,機械学習関連の開発を効率化した話,https://speakerdeck.com/nishiba/ji-jie-xue-xi-guan-lian-falsekai-fa-wo-xiao-lu-hua-sitahua,西場正浩,https://twitter.com/m_nishiba,エムスリー,MLPP#2
+2019/5/16,MLOps Yearning ~ 実運用システムを構築する前にデータサイエンティストが考えておきたいこと,https://www.slideshare.net/rakutentech/mlops-yearning,三浦航,,楽天株式会社,白金鉱業#7
+2019/5/13,研究開始から運用までの機械学習モデル開発,https://www.slideshare.net/FujimotoKeisuke/mlloft-145253865,Keisuke Fujimoto,https://twitter.com/peisuke,ABEJA,ML@Loft
+2019/5/10,Kubernetesによる機械学習基盤、楽天での活用事例 覃子麟 (チンツーリン) /楽天株式会社,https://www.slideshare.net/rakutentech/kubernetes-144707493,覃子麟,,楽天株式会社,
+2019/5/3,機械学習モデル精度の比較・管理について(How to evaluate & manage machine learning model),https://www.slideshare.net/shunyaueta/how-to-evaluate-manage-machine-learning-model-daft,上田隼也(Shunya Ueta),https://twitter.com/hurutoriya,メルカリ,DAFT#2
+2019/4/27,ML Opsのススメ,https://www.slideshare.net/nakapa/ml-ops,中林 紀彦,https://www.slideshare.net/nakapa,SOMPOホールディングス,Machine Learning 15minutes!#35
+2019/4/24,データサイエンティストが力を発揮できるアジャイルデータ活用基盤,https://www.slideshare.net/RecruitLifestyle/ss-141912626,田村真一,,リクルートライフスタイル,PyData.Tokyo#19
+2019/4/17,AI/MLシステム開発の難しさ,https://speakerdeck.com/azaazato/mlsisutemukai-fa-falsenan-sisa,鈴木翔太,https://twitter.com/azaazato,DeNA,ABEJAAI
+2019/4/17,マシンラーニング、マイクロサービス、マネジメント,https://www.slideshare.net/yusukeshibui/machine-learning-microservicemanagement,澁井 雄介(Shibui Yusuke),https://github.com/shibuiwilliam,メルカリ,PyData.Tokyo#19
+2019/4/15,NVIDIA/deepopsを触ってみた話,https://www.slideshare.net/tsuyuzaki/nvidiadeepops,露崎浩太,https://www.linkedin.com/in/kota-tsuyuzaki/,NTT Software Innovation Center,DAFT#2
+2019/4/12,Clovaにおける機械学習モジュールの配信管理基盤 Rekcurd について,https://speakerdeck.com/line_developers/introduction-of-rekcurd-a-flexible-managing-system-for-machine-learning-models,服部圭悟(Keigo Hattori),https://twitter.com/keigohtr,LINE,DAFT#2
+2019/3/8,Data Engineering at SmartNews,https://speakerdeck.com/satoshihirose/data-engineering-at-smartnews,satoshihirose,,SmartNews,
+2019/2/19,Kubernetesで機械学習基盤を構築した話,https://speakerdeck.com/kuromt/k8s-ml-platform,kuromatsu,https://twitter.com/kuromt_,富士通研究所,Kubernetes Meetup Tokyo #16
+2019/2/14,SageMakerを用いた高速な顔検出,https://speakerdeck.com/raobystorm/sagemaker-s3fd-face-detector,raobystorm,,mixi,
+2019/1/30,機械学習を活用したサービスにおける工夫紹介,https://www.slideshare.net/syou6162/ss-129831857,Yasuhisa Yoshida,,はてな,
+2019/1/18,ALICE: AI Lab Interfaced with Configurable Environment,https://speakerdeck.com/tahiro/alice-ai-lab-interfaced-with-configurable-environment,廣田佳祐,,ビズリーチ,
+2018/10/4,Jupyter だけで機械学習を実サービス展開できる基盤 - Tech Blog - Recruit Lifestyle Engineer,https://engineer.recruit-lifestyle.co.jp/techblog/2018-10-04-ml-platform/,田村真一,,リクルートライフスタイル,
+2018/7/30,Preferred Networksの機械学習クラスタを支える技術,https://www.slideshare.net/pfi/tech-inmlcluster20180729-julytechfesta2018,大村伸吾(Shingo Omura),,PFN,July Tech Festa 2018
+2018/7/26,PFNの研究基盤,https://www.slideshare.net/pfi/20180723-pfn-pfn-research-system-infrastructure,谷脇大輔(Daisuke Taniwaki),https://twitter.com/dtaniwaki,PFN,DAFT#1
+2018/5/29,Mercari ML Ops Night Vol.1 を開催しました,https://tech.mercari.com/entry/mercari-mlopsnight-1,上田隼也(Shunya Ueta),https://twitter.com/hurutoriya,メルカリ,
+2018/5/29,機械学習プロジェクトを頑健にする施策,https://speakerdeck.com/takahiko03/ji-jie-xue-xi-puroziekutowowan-jian-nisurushi-ce-ml-ops-study-number-2,伊藤敬彦(Takahiko Ito),https://twitter.com/takahi_i,クックパッド,ML Ops Study #2
+2018/5/22,開発を爆速にするキスモの機械学習基盤,http://kysmo.hatenablog.jp/entry/2018/05/22/111111,岡野,,キスモ,企業テックブログ
+2018/3/22,ゼクシィ恋結びに実装 検索基盤と機械学習を併用した自動応答システムの紹介,https://recruit-tech.co.jp/blog/2018/03/22/chatbot_bazz/,木本佳希,,リクルートテクノロジーズ,
+2018/2/21,クックパッドの機械学習基盤 2018 / Machine Learning Platform at Cookpad ~ 2018 ~,https://speakerdeck.com/ayemos/machine-learning-platform-at-cookpad-2018,染谷悠一郎,,クックパッド,
+2018/1/18,Kubernetes を利用したコンテナベース機械学習基盤の構築,https://analytics.livesense.co.jp/entry/2018/01/18/090000,野本,,リブセンス,企業テックブログ
+2017/10/12,リクルートを支える横断テ?ータ基盤と機械学習の適用事例,https://www.slideshare.net/tetsutarowatanabe/ss-80725400,渡部徹太郎(Tetsutaro Watanabe),https://twitter.com/fetarodc,リクルートテクノロジーズ,Data Platform Confference Tokyo 2017
+2017/8/31,AirflowとDockerで俺々データ分析基盤をつくってみた&Imageを公開してみた #kwskrb - Lean Baseball,https://shinyorke.hatenablog.com/entry/airflow-docker,Shinichi Nakagawa ,https://twitter.com/shinyorke ,個人(or NEXT BASE),個人ブログ
