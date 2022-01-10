@@ -1,0 +1,20 @@
+## SNS、発信活動
+- Twitter
+    - [**メインアカウント**](http://twitter.com/meow_noisy)
+        - リリースしたものの告知用。ある程度まとまった物ができたらつぶやいています。
+    - [サブアカウント](https://twitter.com/meow_ASEqS)
+        - 開発の進捗や日常のことはこちら。
+- ブログ
+    - [**技術ブログ(2020年〜; @はてなブログ)**](https://meow-memow.hatenablog.com/)
+        - ML, MLOps, OSINT CTFについて毎月1本を目標に投稿しています。
+    - [(旧)技術ブログ(〜2020年; @Qiita)](https://qiita.com/meow_noisy)
+        - MLOpsについて主に投稿していました。
+    - [雑記ブログ](https://meow-noisy.hatenablog.com/)
+        - 日常のこと。
+- 勉強会発表資料
+    - [**Speaker Deck**](https://speakerdeck.com/meow_noisy)
+        - スライド投稿先
+    - [(旧)Slide Share](https://www2.slideshare.net/meownoisy)
+        - 昔使っていたスライド投稿先。今はSpeaker Deckに完全移行済み。
+- 開発物のコード
+    - [GitHub](https://github.com/meow-noisy)
