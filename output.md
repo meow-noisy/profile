@@ -6,7 +6,7 @@
 ### 機械学習の本番適用、MLOps
 1. 2021/07/08 [『PyData.Tokyo Meetup #23 MLOps〜AIを社会に届ける技術』 聴講メモ](https://meow-memow.hatenablog.com/entry/2021/07/08/215119)
 1. 2020/08/07 [Jupyter Notebookファイルのバッチ化を考える](https://qiita.com/meow_noisy/items/bd90b840137222dbd9d0)
-1. 2020/06/21 ["Full Stack Deep Learning 1. Setting up Machine Learning Projects"のメモ](https://meow-memow.hatenablog.com/entry/2020/06/21/121742)
+1. 2020/06/21 ["Full Stack Deep Learning - Setting up Machine Learning Projects"のメモ](https://meow-memow.hatenablog.com/entry/2020/06/21/121742)
 1. 2020/06/03 [MLCT#12 聴講メモ(特に質疑パート)](https://meow-memow.hatenablog.com/entry/2020/06/03/000645)
 1. 2019/10/06 [【WIP】機械学習システム開発プロジェクトで直面する課題の列挙](https://meow-memow.hatenablog.com/entry/2019/10/06/150510)
 1. 2019/09/29 [【論文メモ】PoCキャンバスを用いた仮説検証プロセスの管理手法](https://meow-memow.hatenablog.com/entry/2019/09/29/224231)

@@ -3,7 +3,7 @@
 2021年は5点の開発物があります。
 
 ### ◇Speaker DeckのPageViewをロギング&可視化する仕組み
-<img src="2021_speakerdeck.jpg" height="350px">
+<a href="2021_speakerdeck.jpg" target="_blank"><img src="2021_speakerdeck.jpg" height="350px"></a>
 
 - 説明
     - スライド共有サイト『Speaker Deck』はシンプルな使い勝手ですが、PageViewの履歴を可視化する機能を提供していないため、自前でデータ分析・可視化環境を(コストを抑えて)構築したというものです。
@@ -18,20 +18,20 @@
 - コードリポジトリ(GitHub): [https://github.com/meow-noisy/speakerdeck_pv_viewer](https://github.com/meow-noisy/speakerdeck_pv_viewer)
 
 ### ◇connpassのイベント参加者のTwitter idを収集し、Twitterリストを作成するPythonスクリプトを書いた
-<img src="2021_connpass2twitter.JPG" height="150px">
+<a href="2021_connpass2twitter.JPG" target="_blank"><img src="2021_connpass2twitter.JPG" height="150px"></a>
 
 - 説明
     - connpassのイベントの中には、ハッシュタグがない場合があるので、参加者のツイッターリストがあると便利と思い実装しました。
     - 参加者リストの収集用途のみとしても使用可能です。
 - 使用技術: 
     - Python, Tweepy, Beautiful Soup
-- 開発期間: 約3週間(7/5〜7/25)
+- 開発期間: 約0.65ヶ月(7/5〜7/25)
 - 解説記事: [connpassのイベント参加者のTwitter idを収集し、Twitterリストを作成するPythonスクリプトを書いた](https://meow-memow.hatenablog.com/entry/2021/07/25/141047)
 - コードリポジトリ(GitHub): [https://github.com/meow-noisy/create_connpass_participants_twitter_list](https://github.com/meow-noisy/create_connpass_participants_twitter_list)
 
 
 ### ◇16進5桁 hit & blow(数当てゲーム)をWeb上で公開
-<img src="2021_hit_and_blow.JPG" height="250px">
+<a href="2021_hit_and_blow.JPG" target="_blank"><img src="2021_hit_and_blow.JPG" height="250px"></a>
 
 - ゲームのURL: [https://meow-noisy.github.io/hit_and_blow_hex/](https://meow-noisy.github.io/hit_and_blow_hex/)
 - 説明
@@ -52,7 +52,7 @@
     - 動画内で静止しているシーンを切り出して画像化します。スライドを映した講演動画の画像化に使えると思います。
     - もともとの開発動機はGitHub Actionsを使用したCI環境を構築しながらPythonパッケージを開発することでした。
 - 使用技術: Python, opencv-python
-- 開発期間: 約3週間(5/15〜6/4)
+- 開発期間: 約0.65ヶ月(5/15〜6/4)
 - コードリポジトリ(GitHub): [https://github.com/meow-noisy/pose_scene_picker](https://github.com/meow-noisy/pose_scene_picker)
 - [PyPI](https://pypi.org/project/pose-scene-picker/)
     - インストール
@@ -62,9 +62,11 @@
 
 
 ### ◇Visual Studio Codeの拡張機能『comment-frame-generator』の開発
+<a href="2021_vscode_plugin.gif" target="_blank"><img src="2021_vscode_plugin.gif" height="250px"></a>
+
+
 - 説明
     - Pythonのコメントアウトを目立たせるように、枠を生成させます。この時、コメントの文字数に沿うようにしています
-    - [デモ画像(gif)](2021_vscode_plugin.gif)
 - 使用技術: TypeScript
 - 開発期間: 約1ヶ月(4/5〜5/9)
 - コードリポジトリ(GitHub): [https://github.com/meow-noisy/comment-frame-generator](https://github.com/meow-noisy/comment-frame-generator)
