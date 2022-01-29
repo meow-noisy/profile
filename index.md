@@ -22,8 +22,8 @@
 一ヶ月あたりブログ記事1本、スライド1本をアウトプットすることを目標にしています。アウトプットの主なトピックはML、OSINT CTF、個人開発です。
 
 - 🆕  新着情報
-    - 2021/12/31 機械学習関係のブログ記事をリリース
-        - 『[音声認識エンジン『Julius』を使って韻を踏んだフレーズペアを探す](https://meow-memow.hatenablog.com/entry/2021/12/31/231636)』
+    - 2022/01/29 OSINT関係の発表スライドをリリース
+        - [ファクトチェックのクイズ](https://speakerdeck.com/meow_noisy/huakutotietukufalsekuizu)
 - 🎉  受賞
     - 機械学習に関して
         - 2022/01/10 『[創作+機械学習 Advent Calendar 2021](https://kivantium.hateblo.jp/entry/advent-calendar-2021)』審査員特別賞 @kivantium賞
@@ -34,7 +34,7 @@
         - 2021/10/23 『Open xINT CTF 2021』チーム戦 3位
             - 参考: [説明スライド](https://speakerdeck.com/meow_noisy/xintctf2021)
 - 📝 [技術アウトプット一覧](output.md)
-    - 2022/01/01 の時点でのアウトプット数: 49個
+    - 2022/01/29 の時点でのアウトプット数: 50個
 
 
 ## ■その他の個別のトピックページ

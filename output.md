@@ -29,6 +29,7 @@
 
 
 ## ■OSINT CTF, OpSec
+1. 2022/01/29 [ファクトチェックのクイズ](https://speakerdeck.com/meow_noisy/huakutotietukufalsekuizu)
 1. 2021/12/21 [『setodaNote CTF』のOSINT問の復習](https://speakerdeck.com/meow_noisy/setodanotectf-osint)
 2. 2021/11/25 [スパイ養成CTF!? AVTokyo 2021の『Open xINT CTF』に参加した!](https://speakerdeck.com/meow_noisy/xintctf2021)
 3. 2021/10/28 [Digital Overdose 2021 Autumn CTF』のOSINT問に挑んだ!](https://speakerdeck.com/meow_noisy/doctf2021-autumn-osint)
