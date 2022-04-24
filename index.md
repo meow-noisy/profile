@@ -15,15 +15,14 @@
         - [CTFのOSINTカテゴリとは](/osint_ctf/about_osint_ctf.md)
     - 個人開発
         - [開発物一覧](/my_products/my_products.md)
-            - 2021年は5点の開発物がありました。
 
 
 ## ■活動
 一ヶ月あたりブログ記事1本、スライド1本をアウトプットすることを目標にしています。アウトプットの主なトピックはML、OSINT CTF、個人開発です。
 
 - 🆕  新着情報
-    - 2022/01/29 OSINT関係の発表スライドをリリース
-        - [ファクトチェックのクイズ](https://speakerdeck.com/meow_noisy/huakutotietukufalsekuizu)
+    - 2022/04/02 OSINT関係の発表スライドをリリース
+        -  [『fSpy』を用いた写真の分析](https://speakerdeck.com/meow_noisy/fspy-woyong-itaxie-zhen-falsefen-xi)
 - 🎉  受賞
     - 機械学習に関して
         - 2022/01/10 『[創作+機械学習 Advent Calendar 2021](https://kivantium.hateblo.jp/entry/advent-calendar-2021)』審査員特別賞 @kivantium賞
@@ -34,7 +33,7 @@
         - 2021/10/23 『Open xINT CTF 2021』チーム戦 3位
             - 参考: [説明スライド](https://speakerdeck.com/meow_noisy/xintctf2021)
 - 📝 [技術アウトプット一覧](output.md)
-    - 2022/01/29 の時点でのアウトプット数: 50個
+    - 2022/04/24 の時点でのアウトプット数: 52個
 
 
 ## ■その他の個別のトピックページ

@@ -29,6 +29,8 @@
 
 
 ## ■OSINT CTF, OpSec
+1. 2022/04/02 [『fSpy』を用いた写真の分析](https://speakerdeck.com/meow_noisy/fspy-woyong-itaxie-zhen-falsefen-xi)
+1. 2022/02/26 [虹の写真をSNSに投稿することの危険性](https://speakerdeck.com/meow_noisy/hong-falsexie-zhen-wosnsnitou-gao-surukotofalsewei-xian-xing)
 1. 2022/01/29 [ファクトチェックのクイズ](https://speakerdeck.com/meow_noisy/huakutotietukufalsekuizu)
 1. 2021/12/21 [『setodaNote CTF』のOSINT問の復習](https://speakerdeck.com/meow_noisy/setodanotectf-osint)
 2. 2021/11/25 [スパイ養成CTF!? AVTokyo 2021の『Open xINT CTF』に参加した!](https://speakerdeck.com/meow_noisy/xintctf2021)
