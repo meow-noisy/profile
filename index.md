@@ -21,8 +21,8 @@
 一ヶ月あたりブログ記事1本、スライド1本をアウトプットすることを目標にしています。アウトプットの主なトピックはML、OSINT CTF、個人開発です。
 
 - 🆕  新着情報
-    - 2022/04/02 OSINT関係の発表スライドをリリース
-        -  [『fSpy』を用いた写真の分析](https://speakerdeck.com/meow_noisy/fspy-woyong-itaxie-zhen-falsefen-xi)
+    - 2022/05/01 OSINT関係の技術ブログを公開
+        -  [地理的位置に基づく店舗名の(エセ)AND検索](https://meow-memow.hatenablog.com/entry/2022/05/01/214751)
 - 🎉  受賞
     - 機械学習に関して
         - 2022/01/10 『[創作+機械学習 Advent Calendar 2021](https://kivantium.hateblo.jp/entry/advent-calendar-2021)』審査員特別賞 @kivantium賞
@@ -33,7 +33,7 @@
         - 2021/10/23 『Open xINT CTF 2021』チーム戦 3位
             - 参考: [説明スライド](https://speakerdeck.com/meow_noisy/xintctf2021)
 - 📝 [技術アウトプット一覧](output.md)
-    - 2022/04/24 の時点でのアウトプット数: 52個
+    - 2022/05/08 の時点でのアウトプット数: 53個
 
 
 ## ■その他の個別のトピックページ

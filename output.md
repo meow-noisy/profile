@@ -29,6 +29,7 @@
 
 
 ## ■OSINT CTF, OpSec
+1. 2022/05/01 [地理的位置に基づく店舗名の(エセ)AND検索](https://meow-memow.hatenablog.com/entry/2022/05/01/214751)
 1. 2022/04/02 [『fSpy』を用いた写真の分析](https://speakerdeck.com/meow_noisy/fspy-woyong-itaxie-zhen-falsefen-xi)
 1. 2022/02/26 [虹の写真をSNSに投稿することの危険性](https://speakerdeck.com/meow_noisy/hong-falsexie-zhen-wosnsnitou-gao-surukotofalsewei-xian-xing)
 1. 2022/01/29 [ファクトチェックのクイズ](https://speakerdeck.com/meow_noisy/huakutotietukufalsekuizu)
