@@ -4,6 +4,8 @@
         - リリースしたものの告知用。ある程度まとまった物ができたらつぶやいています。
     - [サブアカウント](https://twitter.com/meow_ASEqS)
         - 開発の進捗や日常のことはこちら。
+    - [サブアカウント2](https://twitter.com/m30wbad0ps3c)
+        - ???
 - ブログ
     - [**技術ブログ(2020年〜; @はてなブログ)**](https://meow-memow.hatenablog.com/)
         - ML, MLOps, OSINT CTFについて毎月1本を目標に投稿しています。
