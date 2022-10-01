@@ -11,8 +11,7 @@
     - 担当範囲: 機械学習(ML)技術を搭載したシステムの設計、開発、保守・運用・エンハンス
     - [経歴](career.md)
 - 趣味
-    - CTFのOSINTカテゴリの問題を解くこと
-        - [CTFのOSINTカテゴリとは](/osint_ctf/about_osint_ctf.md)
+    - [CTFのOSINTカテゴリの問題](/osint_ctf/about_osint_ctf.md)を解くこと
     - 個人開発
         - [開発物一覧](/my_products/my_products.md)
 
@@ -21,9 +20,8 @@
 一ヶ月あたりブログ記事1本、スライド1本をアウトプットすることを目標にしています。アウトプットの主なトピックはML、OSINT CTF、個人開発です。
 
 - 🆕  新着情報
-    - 2022/09/11 OSINT関係の技術スライドを2件公開
-        - 2022/08/29 [CTF OSINTカテゴリ 入門](https://speakerdeck.com/meow_noisy/ctf-osintkategori-ru-men)
-        - 2022/09/11 [(たぶん)最高難易度のOSINT CTF『ReconVillage CTF 2022』参加報告](https://speakerdeck.com/meow_noisy/reconvillage-ctf2022-can-jia-bao-gao)
+    - 2022/09/28 OSINT関係の技術スライドを1件公開
+        - [ReconVillage CTF2022のChallenge 14の復習](https://speakerdeck.com/meow_noisy/rvctf2022nowen-14nofu-xi)
 - 🎉  受賞
     - 機械学習に関して
         - 2022/01/10 『[創作+機械学習 Advent Calendar 2021](https://kivantium.hateblo.jp/entry/advent-calendar-2021)』審査員特別賞 @kivantium賞
@@ -34,11 +32,12 @@
         - 2021/10/23 『Open xINT CTF 2021』チーム戦 3位
             - 参考: [説明スライド](https://speakerdeck.com/meow_noisy/xintctf2021)
 - 📝 [技術アウトプット一覧](output.md)
-    - 2022/09/11 の時点でのアウトプット数: 56個
+    - 2022/09/28 の時点でのアウトプット数: 58個
 
 
 ## ■その他の個別のトピックページ
 - [機械学習技術を搭載したシステムの開発](ml_production/ml_prod_portal.md)
+- [CTFのOSINTカテゴリとは](/osint_ctf/about_osint_ctf.md)
 
 
 ## ■SNS、活動内容の発信
