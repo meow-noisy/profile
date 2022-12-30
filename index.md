@@ -20,8 +20,8 @@
 一ヶ月あたりブログ記事1本、スライド1本をアウトプットすることを目標にしています。アウトプットの主なトピックはML、OSINT CTF、個人開発です。
 
 - 🆕  新着情報
-    - 2022/09/28 OSINT関係の技術スライドを1件公開
-        - [ReconVillage CTF2022のChallenge 14の復習](https://speakerdeck.com/meow_noisy/rvctf2022nowen-14nofu-xi)
+    - 2022/12/24 OSINT関係の技術スライドを1件公開
+        - [xeuledocについて](https://speakerdeck.com/meow_noisy/xeuledocnituite)
 - 🎉  受賞
     - 機械学習に関して
         - 2022/01/10 『[創作+機械学習 Advent Calendar 2021](https://kivantium.hateblo.jp/entry/advent-calendar-2021)』審査員特別賞 @kivantium賞
@@ -32,7 +32,7 @@
         - 2021/10/23 『Open xINT CTF 2021』チーム戦 3位
             - 参考: [説明スライド](https://speakerdeck.com/meow_noisy/xintctf2021)
 - 📝 [技術アウトプット一覧](output.md)
-    - 2022/09/28 の時点でのアウトプット数: 58個
+    - 2022/12/31 の時点でのアウトプット数: 61個
 
 
 ## ■その他の個別のトピックページ
