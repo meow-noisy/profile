@@ -22,18 +22,10 @@
 - 🆕  新着情報
     - 2022/12/24 OSINT関係の技術スライドを1件公開
         - [xeuledocについて](https://speakerdeck.com/meow_noisy/xeuledocnituite)
-- 🎉  受賞
-    - 機械学習に関して
-        - 2022/01/10 『[創作+機械学習 Advent Calendar 2021](https://kivantium.hateblo.jp/entry/advent-calendar-2021)』審査員特別賞 @kivantium賞
-            - [こちらの記事](https://meow-memow.hatenablog.com/entry/2021/12/31/231636)に関して表彰いただきました
-            - 選定された背景に関しては↓で述べられております。
-                - 『[創作+機械学習 Advent Calendar 2021 結果発表 - kivantium活動日記](https://kivantium.hateblo.jp/entry/advent-calendar-2021-result)』
-    - OSINT CTFに関して
-        - 2021/10/23 『Open xINT CTF 2021』チーム戦 3位
-            - 参考: [説明スライド](https://speakerdeck.com/meow_noisy/xintctf2021)
 - 📝 [技術アウトプット一覧](output.md)
     - 2022/12/31 の時点でのアウトプット数: 61個
-
+- 🎉  受賞
+    - [受賞履歴](./awards.md)
 
 ## ■その他の個別のトピックページ
 - [機械学習技術を搭載したシステムの開発](ml_production/ml_prod_portal.md)
