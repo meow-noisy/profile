@@ -1,32 +1,6 @@
 # 技術アウトプットまとめ
 
-機械学習、OSINT CTF、個人開発についての技術ブログ記事や発表スライドが多いです。
-
-## ■機械学習
-### 機械学習の本番適用、MLOps
-1. 2021/07/08 [『PyData.Tokyo Meetup #23 MLOps〜AIを社会に届ける技術』 聴講メモ](https://meow-memow.hatenablog.com/entry/2021/07/08/215119)
-2. 2020/08/07 [Jupyter Notebookファイルのバッチ化を考える](https://qiita.com/meow_noisy/items/bd90b840137222dbd9d0)
-3. 2020/06/21 ["Full Stack Deep Learning - Setting up Machine Learning Projects"のメモ](https://meow-memow.hatenablog.com/entry/2020/06/21/121742)
-4. 2020/06/03 [MLCT#12 聴講メモ(特に質疑パート)](https://meow-memow.hatenablog.com/entry/2020/06/03/000645)
-5. 2019/10/06 [【WIP】機械学習システム開発プロジェクトで直面する課題の列挙](https://meow-memow.hatenablog.com/entry/2019/10/06/150510)
-6. 2019/09/29 [【論文メモ】PoCキャンバスを用いた仮説検証プロセスの管理手法](https://meow-memow.hatenablog.com/entry/2019/09/29/224231)
-7. 2019/09/16 [機械学習プロジェクトのデータバージョン管理ツール『DVC』の「Get Started」のサブノート](https://qiita.com/meow_noisy/items/a644547930e6f2dea12d)
-
-### 創作界隈への機械学習技術の適用
-1. 2021/12/31 [音声認識エンジン『Julius』を使って韻を踏んだフレーズペアを探す](https://meow-memow.hatenablog.com/entry/2021/12/31/231636)
-2. 2020/10/06 [GANベースの画像変換手法『ACL-GAN』を顔写真→アニメ顔変換タスクを中心に理解する](https://meow-memow.hatenablog.com/entry/2020/10/06/223748)
-3. 2020/07/09 [【Council GAN】Im2Im論文『Breaking the cycle 1. Colleagues are all you need』 を 顔写真 → アニメ顔変換タスクを中心に理解する](https://meow-memow.hatenablog.com/entry/2020/07/09/090703)
-4. 2019/12/22 [『animeface-2009』をPythonで使うための悪あがき & PASCAL VOC形式のXMLファイルへ出力する関数の実装](https://qiita.com/meow_noisy/items/868a1967d4ef1492db75)
-5. 2019/11/21 [【論文紹介】U-GAT-IT](https://www2.slideshare.net/meownoisy/ugatit-195710494)
-6. 2019/11/11 [CycleGANで顔写真をアニメ調に変換する](https://www2.slideshare.net/meownoisy/cyclegan-192304094)
-
-### その他の機械学習に関するアウトプット
-1. 2020/12/29 [PyTorchのnn.ConvTranspose2dに与えるパラメータは畳み込みから逆算して考える](https://meow-memow.hatenablog.com/entry/2020/12/29/160019)
-2. 2020/10/10 [機械学習のTrainerのクラス図を写経して高解像度にした](https://meow-memow.hatenablog.com/entry/2020/10/10/163856)
-3. 2020/02/16 [コンフィグファイルをyamlじゃなくてpythonファイルで食わせる、という案](https://qiita.com/meow_noisy/items/b18084e3ba3ba571a818)
-4. 2019/11/12 [「Kaggleで勝つデータ分析の技術」輪読&勉強会 第2章](https://www2.slideshare.net/meownoisy/kaggle-2-191950766)
-
-
+OSINT CTF、機械学習、個人開発についての技術ブログ記事や発表スライドが多いです。
 
 ## ■OSINT CTF, OpSec
 1. 2022/12/24 [xeuledocについて](https://speakerdeck.com/meow_noisy/xeuledocnituite)
@@ -62,6 +36,32 @@
 1. 2020/09/16 [Trend Micro CTF 2019に挑んだ ～模擬監視カメラ映像解析編～](https://speakerdeck.com/meow_noisy/tmctf2019-wildcard300)
 2. 2019/10/30 [2019年 SECCON Beginners CTF講習会 参加体験記](https://www2.slideshare.net/meownoisy/2019-seccon-beginners-ctf-187374122)
 3. 2019/09/25 [Trend Micro CTF 2019の機械学習カテゴリの問題に挑んだ](https://www.slideshare.net/meownoisy/trend-micro-ctf-2019/meownoisy/trend-micro-ctf-2019)
+
+
+## ■機械学習
+### 機械学習の本番適用、MLOps
+1. 2021/07/08 [『PyData.Tokyo Meetup #23 MLOps〜AIを社会に届ける技術』 聴講メモ](https://meow-memow.hatenablog.com/entry/2021/07/08/215119)
+2. 2020/08/07 [Jupyter Notebookファイルのバッチ化を考える](https://qiita.com/meow_noisy/items/bd90b840137222dbd9d0)
+3. 2020/06/21 ["Full Stack Deep Learning - Setting up Machine Learning Projects"のメモ](https://meow-memow.hatenablog.com/entry/2020/06/21/121742)
+4. 2020/06/03 [MLCT#12 聴講メモ(特に質疑パート)](https://meow-memow.hatenablog.com/entry/2020/06/03/000645)
+5. 2019/10/06 [【WIP】機械学習システム開発プロジェクトで直面する課題の列挙](https://meow-memow.hatenablog.com/entry/2019/10/06/150510)
+6. 2019/09/29 [【論文メモ】PoCキャンバスを用いた仮説検証プロセスの管理手法](https://meow-memow.hatenablog.com/entry/2019/09/29/224231)
+7. 2019/09/16 [機械学習プロジェクトのデータバージョン管理ツール『DVC』の「Get Started」のサブノート](https://qiita.com/meow_noisy/items/a644547930e6f2dea12d)
+
+### 創作界隈への機械学習技術の適用
+1. 2021/12/31 [音声認識エンジン『Julius』を使って韻を踏んだフレーズペアを探す](https://meow-memow.hatenablog.com/entry/2021/12/31/231636)
+2. 2020/10/06 [GANベースの画像変換手法『ACL-GAN』を顔写真→アニメ顔変換タスクを中心に理解する](https://meow-memow.hatenablog.com/entry/2020/10/06/223748)
+3. 2020/07/09 [【Council GAN】Im2Im論文『Breaking the cycle 1. Colleagues are all you need』 を 顔写真 → アニメ顔変換タスクを中心に理解する](https://meow-memow.hatenablog.com/entry/2020/07/09/090703)
+4. 2019/12/22 [『animeface-2009』をPythonで使うための悪あがき & PASCAL VOC形式のXMLファイルへ出力する関数の実装](https://qiita.com/meow_noisy/items/868a1967d4ef1492db75)
+5. 2019/11/21 [【論文紹介】U-GAT-IT](https://www2.slideshare.net/meownoisy/ugatit-195710494)
+6. 2019/11/11 [CycleGANで顔写真をアニメ調に変換する](https://www2.slideshare.net/meownoisy/cyclegan-192304094)
+
+### その他の機械学習に関するアウトプット
+1. 2020/12/29 [PyTorchのnn.ConvTranspose2dに与えるパラメータは畳み込みから逆算して考える](https://meow-memow.hatenablog.com/entry/2020/12/29/160019)
+2. 2020/10/10 [機械学習のTrainerのクラス図を写経して高解像度にした](https://meow-memow.hatenablog.com/entry/2020/10/10/163856)
+3. 2020/02/16 [コンフィグファイルをyamlじゃなくてpythonファイルで食わせる、という案](https://qiita.com/meow_noisy/items/b18084e3ba3ba571a818)
+4. 2019/11/12 [「Kaggleで勝つデータ分析の技術」輪読&勉強会 第2章](https://www2.slideshare.net/meownoisy/kaggle-2-191950766)
+
 
 
 ## ■個人開発
