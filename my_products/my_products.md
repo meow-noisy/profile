@@ -1,4 +1,31 @@
 # 過去の開発物
+## ■2022年
+2022年は2点の開発物があります。
+
+### ◇Webアプリ: Googleマップの位置座標を整形くん(α版)
+<a href="2022_google_map_gps_formatter.jpg" target="_blank"><img src="2022_google_map_gps_formatter.jpg" ></a>
+
+- URL: [https://meow-noisy.github.io/google_map_gps_formatter/](https://meow-noisy.github.io/google_map_gps_formatter/)
+- 説明
+    - CTFのOSINTカテゴリで写真の位置座標を答える問題は、フラグ構築が手間です。
+        - ここでフラグ構築とは、GoogleマップのURLから座標を抽出して四捨五入してフォーマットへ整形することです。
+    - したがって、フォームにGoogleマップを貼り付けると一発でサブミット可能な状態に整形してくれるツールを作りました。
+- 使用技術: Vue.js(CSSフレームワーク)
+- 開発期間: 約0.2ヶ月
+
+
+### ◇地理的位置に基づく店舗名の(エセ)AND検索
+
+- 説明
+    - 店舗名2つを指定すると距離の近い店舗ペアを列挙するスクリプトです。
+    - Googleマップで検索キーを2つ入れても現在見ている範囲内しか提示してくれないので、日本全国の候補をリストアップする実装にしています。
+- 使用技術: Python, YOLP
+- 開発期間: 約0.25ヶ月
+- 解説記事: [地理的位置に基づく店舗名の(エセ)AND検索](https://meow-memow.hatenablog.com/entry/2022/05/01/214751)
+- コードリポジトリ(GitHub): [https://github.com/meow-noisy/geocoding_AND_search](https://github.com/meow-noisy/geocoding_AND_search)
+
+
+
 ## ■2021年
 2021年は5点の開発物があります。
 
