@@ -2,7 +2,7 @@
 - Twitter
     - [**メインアカウント**](http://twitter.com/meow_noisy)
         - リリースしたものの告知用。ある程度まとまった物ができたらつぶやいています。
-    - [サブアカウント](https://twitter.com/meow_ASEqS)
+    - [サブアカウント](https://twitter.com/chousa_friends)
         - 開発の進捗や日常のことはこちら。
     - [サブアカウント2](https://twitter.com/m30wbad0ps3c)
         - ???
