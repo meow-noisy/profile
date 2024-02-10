@@ -4,7 +4,9 @@ OSINT CTF、機械学習、個人開発についての技術ブログ記事や�
 
 
 
-## ■OSINT CTF, OpSec
+## ■ デジタル調査, OSINT CTF, OpSec
+1. 2024/02/04 [1分でわかる『OpenSwitchMaps Web』のすごさ(YouTube)](https://youtu.be/mRmR4-UCr8s)
+1. 2024/01/28 [検索したいキーワードを複数の検索エンジンで一斉に検索できるchrome拡張機能を作ろう](https://meow-memow.hatenablog.com/entry/2024/01/28/151724)
 1. 2023/12/03 [ボツ問 “mural(rev1)” 解説](https://speakerdeck.com/meow_noisy/botuwen-mural-rev1-jie-shuo)
     - Open xINT CTF 2023の作問に携わった際にお蔵入りにした問題の紹介です。
 2. 2023/8/26 [Open xINT CTFで出題された寿司キットの食レポ](https://meow-memow.hatenablog.com/entry/2023/08/26/110942)

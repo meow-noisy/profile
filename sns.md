@@ -6,6 +6,9 @@
         - 開発の進捗や日常のことはこちら。
     - [サブアカウント2](https://twitter.com/m30wbad0ps3c)
         - ???
+- Bluesky
+    - [https://bsky.app/profile/chousa-friends.bsky.social](https://bsky.app/profile/chousa-friends.bsky.social)
+        - Twitterのバックアップ用の位置付け
 - ブログ
     - [**技術ブログ(2020年〜; @はてなブログ)**](https://meow-memow.hatenablog.com/)
         - ML, MLOps, OSINT CTFについて毎月1本を目標に投稿しています。
@@ -20,3 +23,6 @@
         - 昔使っていたスライド投稿先。今はSpeaker Deckに完全移行済み。
 - 開発物のコード
     - [GitHub](https://github.com/meow-noisy)
+- YouTube
+  - [ちょうさフレンズ](https://www.youtube.com/@chousa_friends)
+      - ツールの紹介や、CTF実況など
