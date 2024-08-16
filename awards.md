@@ -1,4 +1,14 @@
 # 受賞履歴
+### 2024年
+- 2024/06 DIVER OSINT CTF 2024 優勝(チーム)
+    - チーム『KAKITSUBATA』を結成し挑みました。
+      - メンバー: kn1cht, blackwasan, \_roku\_, kuzushiki, meow_noisy
+    - 参考
+      - [CTF TIMEページ](https://ctftime.org/event/2365/)
+      - [write-up(チームメンバー共同執筆)](https://zenn.dev/kn1cht/articles/diver-osint-ctf-2024-kakitsubata)
+      - [DIVER OSINT CTF チーム内 前打ち資料](https://meow-memow.hatenablog.com/entry/2024/06/12/214807)
+
+
 ### 2023年
 - 2023/08 Recon Village CTF (DEFCON31) 優勝(チーム)
     - チームpinjaのゲストメンバーとしての参加です。
