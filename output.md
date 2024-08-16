@@ -10,7 +10,7 @@ OSINT CTF、機械学習、個人開発についての技術ブログ記事や�
 2. 2024/06/12 [DIVER OSINT CTF チーム内 前打ち資料 (チーム "KAKITSUBATA")](https://meow-memow.hatenablog.com/entry/2024/06/12/214807)
 4. 2024/05/12 [『Stranger Case III』でチーム“Lévy Flight”が提出したレポートの公開](https://meow-memow.hatenablog.com/entry/2024/05/12/115524)
 5. 2024/05/05 [Stranger Case V3 作戦会議](https://speakerdeck.com/meow_noisy/stranger-case-v3-timunei-zuo-zhan-hui-yi)
-6. [HEXA OSINT CTF V3 - writeup (Team: A Study in Tricolore)](https://teams-share.qiita.com/shared_articles/db21500ca57e87bbcba11062fe75ddc7)
+6. 2024/04/22 [HEXA OSINT CTF V3 - writeup (Team: A Study in Tricolore)](https://teams-share.qiita.com/shared_articles/db21500ca57e87bbcba11062fe75ddc7)
    - チーム共同執筆です
 7. 2024/04/15 [HEXA OSINT CTF V3 作戦会議](https://speakerdeck.com/meow_noisy/hexa-osint-ctf-v3-zuo-zhan-hui-yi)
 8. 2024/02/04 [1分でわかる『OpenSwitchMaps Web』のすごさ(YouTube)](https://youtu.be/mRmR4-UCr8s)
