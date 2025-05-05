@@ -19,10 +19,10 @@
 一ヶ月あたりブログ記事1本、スライド1本をアウトプットすることを目標にしています。アウトプットの主なトピックはOSINT CTF、ML、個人開発です。
 
 - 🆕  新着情報
-    - 2024/07/06 ブログ記事[CTF OSINT 問題設計の留意事項](https://meow-memow.hatenablog.com/entry/2024/07/06/111848) を公開しました。
+    - 2025/05/01 ブログ記事 [ChatGPTによる逆画像検索クエリのチューニング: 夜→昼の画像変換](https://meow-memow.hatenablog.com/entry/2025/05/01/205429) を公開しました。
 - 📝 技術アウトプット
     - [技術アウトプット一覧](output.md)
-    - 2024/08/16 の時点でのアウトプット数: 75個
+    - 2025/05/05 の時点でのアウトプット数: 78個
 - 👨‍💻 個人開発
     - [開発物一覧](/my_products/my_products.md)
 - 🎉  受賞
@@ -34,7 +34,7 @@
 
 
 ## ■SNS、活動内容の発信
-- [**Twitter**](http://twitter.com/meow_noisy)
+- [**X(Twitter)**](http://x.com/meow_noisy)
     - 技術アウトプットの告知用です。
     - DMを開けていますので何かあればこちらからお願いします。
 - [**技術ブログ(はてなブログ)**](https://meow-memow.hatenablog.com/)
