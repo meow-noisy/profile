@@ -1,4 +1,14 @@
 # 受賞履歴
+### 2025年
+- 2025/06 DIVER OSINT CTF 2025 2位(チーム)
+    - チーム『KAKITSUBATA』を結成し挑みました。
+      - メンバー: kn1cht, blackwasan, nomizou, kuzushiki, Тамияс, meow_noisy
+    - 参考
+      - [CTF TIMEページ](https://ctftime.org/event/2751)
+      - [write-up(チームメンバー共同執筆)](https://zenn.dev/kn1cht/articles/diver-osint-ctf-2025-kakitsubata)
+      - [DIVER OSINT CTF チーム内 前打ち資料(2025年 ver.)](https://meow-memow.hatenablog.com/entry/2025/06/14/104518)
+
+
 ### 2024年
 - 2024/06 DIVER OSINT CTF 2024 優勝(チーム)
     - チーム『KAKITSUBATA』を結成し挑みました。
