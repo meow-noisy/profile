@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: "技術アウトプットまとめ" }} | {{ site.title }}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: #f2f3f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: linear-gradient(140deg, #0f1923 0%, #1a2a4a 100%);
+      color: #fff;
+      padding: 40px 24px 36px;
+    }
+    .header-inner { max-width: 1200px; margin: 0 auto; }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+    .site-nav a { color: rgba(255,255,255,.6); text-decoration: none; }
+    .site-nav a:hover { color: #fff; }
+    .site-nav .sep { color: rgba(255,255,255,.3); }
+
+    .page-title {
+      font-size: clamp(22px, 4vw, 34px);
+      font-weight: 700;
+      letter-spacing: -.5px;
+    }
+    .page-subtitle {
+      margin-top: 8px;
+      font-size: 14px;
+      color: rgba(255,255,255,.55);
+      max-width: 600px;
+    }
+    .stats {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      font-size: 12px;
+      color: rgba(255,255,255,.5);
+      background: rgba(255,255,255,.08);
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── Controls ── */
+    .controls {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 24px 0;
+    }
+    .search-box {
+      width: 100%;
+      padding: 11px 16px;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      font-size: 14px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
+      outline: none;
+      transition: border-color .2s;
+      margin-bottom: 14px;
+    }
+    .search-box:focus { border-color: #5b5ef4; }
+
+    .category-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: 5px 14px;
+      border: 1.5px solid #ddd;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      background: #fff;
+      color: #555;
+      transition: all .15s;
+    }
+    .filter-btn:hover { border-color: #5b5ef4; color: #5b5ef4; transform: translateY(-1px); }
+    .filter-btn.active {
+      background: #5b5ef4;
+      border-color: #5b5ef4;
+      color: #fff;
+    }
+
+    /* ── Main ── */
+    .cards-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .section-heading {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #999;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e2e2e8;
+    }
+    .section-heading:first-child { margin-top: 0; }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,.06);
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 28px rgba(0,0,0,.12);
+    }
+
+    .card-thumb {
+      position: relative;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      background: #e8eaf0;
+    }
+    .card-thumb .thumb-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      transition: opacity .4s;
+    }
+    .card-thumb .thumb-img.loaded { opacity: 1; }
+    .card-thumb .thumb-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      transition: opacity .3s;
+    }
+    .card-thumb .thumb-placeholder.hidden { opacity: 0; pointer-events: none; }
+
+    .site-badge {
+      position: absolute;
+      bottom: 8px; right: 8px;
+      background: rgba(0,0,0,.55);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 4px;
+    }
+
+    .card-body {
+      padding: 14px 16px 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .card-date {
+      font-size: 11px;
+      color: #aaa;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .cat-badge {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .cat-osint    { background: #e8f2fd; color: #1a6fa8; }
+    .cat-security { background: #fdecec; color: #c0392b; }
+    .cat-ml-prod  { background: #e8f8ee; color: #1a8044; }
+    .cat-ml-art   { background: #fef5e4; color: #b7770d; }
+    .cat-ml-other { background: #f0e8ff; color: #6c3483; }
+    .cat-dev      { background: #e6f4ea; color: #1e7e34; }
+    .cat-cloud    { background: #e8eaf6; color: #283593; }
+    .cat-misc     { background: #f5f5f5; color: #666; }
+
+    .card-title {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.55;
+      color: #1d1d1f;
+      text-decoration: none;
+      flex: 1;
+    }
+    .card-title:hover { color: #5b5ef4; }
+
+    .card-note {
+      font-size: 11px;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    .no-results {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 60px 20px;
+      color: #aaa;
+    }
+    .no-results h3 { font-size: 17px; margin-bottom: 8px; color: #777; }
+
+    .site-footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 13px;
+      color: #bbb;
+      border-top: 1px solid #e5e5e5;
+      margin-top: 20px;
+    }
+    .site-footer a { color: #5b5ef4; text-decoration: none; }
+    .site-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 540px) {
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <span class="sep">›</span>
+      <span>技術アウトプット</span>
+    </nav>
+    <h1 class="page-title">{{ page.title | default: "技術アウトプットまとめ" }}</h1>
+    <p class="page-subtitle">{{ page.description | default: site.description }}</p>
+    <div class="stats">
+      <span class="stat" id="count-badge">— 件</span>
+    </div>
+  </div>
+</header>
+
+<div class="controls">
+  <input type="search" class="search-box" id="search-input" placeholder="記事タイトルや日付で検索...">
+  <div class="category-filters" id="filters">
+    <button class="filter-btn active" data-cat="all">すべて</button>
+    <button class="filter-btn" data-cat="osint">OSINT・デジタル調査</button>
+    <button class="filter-btn" data-cat="security">セキュリティ</button>
+    <button class="filter-btn" data-cat="ml-prod">機械学習・MLOps</button>
+    <button class="filter-btn" data-cat="ml-art">ML×創作</button>
+    <button class="filter-btn" data-cat="ml-other">機械学習その他</button>
+    <button class="filter-btn" data-cat="dev">個人開発</button>
+    <button class="filter-btn" data-cat="cloud">クラウド</button>
+    <button class="filter-btn" data-cat="misc">未分類</button>
+  </div>
+</div>
+
+<main class="cards-container" id="main"></main>
+
+<!-- Jekyll がレンダリングした markdown の内容をここに格納し、JS で解析する -->
+<div id="md-content" style="display:none">{{ content }}</div>
+
+<footer class="site-footer">
+  <a href="{{ '/' | relative_url }}">← ホームに戻る</a>
+</footer>
+
+<script>
+// ── markdown から記事データを解析 ──────────────────────────────────────
+function catFromHeading(text) {
+  if (/OSINT|デジタル調査/.test(text)) return 'osint';
+  if (/情報セキュリティ/.test(text))   return 'security';
+  if (/本番|MLOps/.test(text))         return 'ml-prod';
+  if (/創作/.test(text))               return 'ml-art';
+  if (/機械学習/.test(text))           return 'ml-other';
+  if (/個人開発/.test(text))           return 'dev';
+  if (/クラウド/.test(text))           return 'cloud';
+  if (/未分類/.test(text))             return 'misc';
+  return null;
+}
+
+function parseArticles() {
+  const container = document.getElementById('md-content');
+  const articles = [];
+  let currentCat = 'misc';
+
+  Array.from(container.children).forEach(el => {
+    const tag = el.tagName;
+    if (tag === 'H2' || tag === 'H3') {
+      const cat = catFromHeading(el.textContent);
+      if (cat) currentCat = cat;
+      return;
+    }
+    if (tag !== 'OL') return;
+
+    Array.from(el.children).forEach(li => {
+      if (li.tagName !== 'LI') return;
+      const link = li.querySelector('a');
+      if (!link) return;
+
+      // 日付はテキストノードの先頭にある "YYYY/MM/DD" または "YYYY/M/D"
+      const rawText = Array.from(li.childNodes)
+        .filter(n => n.nodeType === Node.TEXT_NODE)
+        .map(n => n.textContent).join('');
+      const dateMatch = rawText.match(/\d{4}\/\d{1,2}\/\d{1,2}/);
+      const date = dateMatch ? dateMatch[0] : '';
+
+      // 入れ子の li があればノート
+      const nestedLi = li.querySelector('li');
+      const note = nestedLi ? nestedLi.textContent.trim() : '';
+
+      articles.push({
+        date,
+        title: link.textContent.trim(),
+        url: link.href,
+        cat: currentCat,
+        note,
+      });
+    });
+  });
+
+  return articles;
+}
+
+const ARTICLES = parseArticles();
+
+// ── 表示ロジック ───────────────────────────────────────────────────────
+const CAT_LABELS = {
+  osint:    'OSINT・デジタル調査',
+  security: 'セキュリティ',
+  'ml-prod':  '機械学習・MLOps',
+  'ml-art':   'ML×創作',
+  'ml-other': '機械学習その他',
+  dev:      '個人開発',
+  cloud:    'クラウド',
+  misc:     '未分類',
+};
+const CAT_ORDER = ['osint','security','ml-prod','ml-art','ml-other','dev','cloud','misc'];
+
+const SITE_ICON  = { speakerdeck:'🎤', hatena:'📝', qiita:'✍️', youtube:'▶️', slideshare:'📊', other:'🔗' };
+const SITE_LABEL = { speakerdeck:'Slide', hatena:'Blog', qiita:'Qiita', youtube:'Video', slideshare:'Slide', other:'Link' };
+
+function siteOf(url) {
+  if (url.includes('speakerdeck.com')) return 'speakerdeck';
+  if (url.includes('hatenablog.com'))  return 'hatena';
+  if (url.includes('qiita.com'))       return 'qiita';
+  if (url.includes('youtu'))           return 'youtube';
+  if (url.includes('slideshare.net'))  return 'slideshare';
+  return 'other';
+}
+
+function ytId(url) {
+  const m = url.match(/(?:youtu\.be\/|[?&]v=)([^&?#]+)/);
+  return m ? m[1] : null;
+}
+
+let activeCat = 'all';
+let searchQ = '';
+
+function filtered() {
+  return ARTICLES.filter(a => {
+    const c = activeCat === 'all' || a.cat === activeCat;
+    const s = !searchQ || a.title.toLowerCase().includes(searchQ) || a.date.includes(searchQ);
+    return c && s;
+  });
+}
+
+function cardHTML(a) {
+  const site = siteOf(a.url);
+  const note = a.note ? `<p class="card-note">${a.note}</p>` : '';
+  const safeUrl   = a.url.replace(/"/g, '&quot;');
+  const safeTitle = a.title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return `
+    <article class="card" data-url="${safeUrl}">
+      <div class="card-thumb">
+        <div class="thumb-placeholder">${SITE_ICON[site]}</div>
+        <img class="thumb-img" src="" alt="" loading="lazy">
+        <span class="site-badge">${SITE_LABEL[site]}</span>
+      </div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="card-date">${a.date}</span>
+          <span class="cat-badge cat-${a.cat}">${CAT_LABELS[a.cat]}</span>
+        </div>
+        <a href="${safeUrl}" target="_blank" rel="noopener" class="card-title">${safeTitle}</a>
+        ${note}
+      </div>
+    </article>`;
+}
+
+function render() {
+  const list = filtered();
+  document.getElementById('count-badge').textContent = list.length + ' 件';
+  const main = document.getElementById('main');
+
+  if (list.length === 0) {
+    main.innerHTML = '<div class="cards-grid"><div class="no-results"><h3>該当する記事がありません</h3><p>別のキーワードで検索してみてください。</p></div></div>';
+    return;
+  }
+
+  const grouped = {};
+  list.forEach(a => { (grouped[a.cat] = grouped[a.cat] || []).push(a); });
+
+  main.innerHTML = CAT_ORDER.filter(c => grouped[c]).map(c =>
+    `<h2 class="section-heading">${CAT_LABELS[c]} — ${grouped[c].length} 件</h2>` +
+    `<div class="cards-grid">${grouped[c].map(cardHTML).join('')}</div>`
+  ).join('');
+
+  lazyLoad();
+}
+
+function lazyLoad() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(async entry => {
+      if (!entry.isIntersecting) return;
+      const card = entry.target;
+      obs.unobserve(card);
+      const url = card.dataset.url;
+      const img = card.querySelector('.thumb-img');
+      const ph  = card.querySelector('.thumb-placeholder');
+      if (!img) return;
+
+      const key = 't:' + url;
+      const hit = sessionStorage.getItem(key);
+      if (hit) { if (hit !== '-') applyThumb(img, ph, hit); return; }
+
+      const vid = ytId(url);
+      if (vid) {
+        const src = `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
+        sessionStorage.setItem(key, src);
+        applyThumb(img, ph, src);
+        return;
+      }
+
+      try {
+        let src = null;
+
+        if (url.includes('hatenablog.com')) {
+          // Atom フィード経由でアイキャッチを取得（CORS 許可済み）
+          // フィードにない古い記事は microlink スクリーンショットにフォールバック
+          src = await fetchHatenaEyecatch(url);
+        } else {
+          const res = await fetch(`https://api.microlink.io/?url=${encodeURIComponent(url)}&palette=false`);
+          const data = await res.json();
+          src = data?.data?.image?.url || null;
+        }
+
+        sessionStorage.setItem(key, src || '-');
+        if (src) applyThumb(img, ph, src);
+      } catch (_) {
+        sessionStorage.setItem(key, '-');
+      }
+    });
+  }, { rootMargin: '400px' });
+
+  document.querySelectorAll('.card').forEach(c => obs.observe(c));
+}
+
+
+// ── Hatena Blog アイキャッチ取得 ──────────────────────────────────────
+// Atom フィード (CORS: *) を hostname ごとにキャッシュして使い回す
+const _hatenaFeedCache = {}; // hostname -> Promise<Map<url, imgSrc>>
+
+async function buildHatenaFeedMap(hostname) {
+  const map = new Map();
+  const res = await fetch(`https://${hostname}/feed`);
+  const xml = await res.text();
+  const doc = new DOMParser().parseFromString(xml, 'application/xml');
+  doc.querySelectorAll('entry').forEach(entry => {
+    const link = entry.querySelector('link[rel="alternate"]') || entry.querySelector('link');
+    const content = entry.querySelector('content');
+    if (!link || !content) return;
+    const entryUrl = link.getAttribute('href');
+    const div = document.createElement('div');
+    div.innerHTML = content.textContent;
+    const img = div.querySelector('img[src*="cdn-ak.f.st-hatena.com"], img[src*="cdn.image.st-hatena.com"]');
+    if (img) map.set(entryUrl, img.getAttribute('src'));
+  });
+  return map;
+}
+
+async function fetchHatenaEyecatch(url) {
+  try {
+    const hostname = new URL(url).hostname;
+    if (!_hatenaFeedCache[hostname]) {
+      _hatenaFeedCache[hostname] = buildHatenaFeedMap(hostname);
+    }
+    const map = await _hatenaFeedCache[hostname];
+    return map.get(url) || null;
+  } catch (_) {
+    return null;
+  }
+}
+
+function applyThumb(img, placeholder, src) {
+  img.onload = () => { img.classList.add('loaded'); placeholder.classList.add('hidden'); };
+  img.onerror = () => {};
+  img.src = src;
+}
+
+document.getElementById('filters').addEventListener('click', e => {
+  if (!e.target.matches('.filter-btn')) return;
+  activeCat = e.target.dataset.cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === activeCat));
+  render();
+});
+
+let timer;
+document.getElementById('search-input').addEventListener('input', e => {
+  clearTimeout(timer);
+  timer = setTimeout(() => { searchQ = e.target.value.trim().toLowerCase(); render(); }, 180);
+});
+
+render();
+</script>
+</body>
+</html>
