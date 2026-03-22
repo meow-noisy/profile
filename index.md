@@ -19,7 +19,7 @@
 一ヶ月あたりブログ記事1本、スライド1本をアウトプットすることを目標にしています。アウトプットの主なトピックはOSINT CTF、ML、個人開発です。
 
 - 🆕  新着情報
-    - 2025/07/26 ブログ記事 [『FRAVIA: The Art of Searching』を読む](https://speakerdeck.com/meow_noisy/fravia-the-art-of-searching-wodu-mu) を公開しました。
+    - {% assign _op = site.pages | where: "path", "output.md" | first %}{% assign _li = _op.content | split: "<li>" %}{% assign _item = _li[1] %}{% assign _date = _item | split: "<a" | first | strip %}{% assign _href = _item | split: 'href="' | last | split: '"' | first %}{% assign _title = _item | split: '">' | last | split: "</a>" | first %}{% if _href contains "speakerdeck.com" %}{% assign _type = "スライド" %}{% elsif _href contains "hatenablog.com" %}{% assign _type = "ブログ記事" %}{% elsif _href contains "qiita.com" %}{% assign _type = "記事" %}{% elsif _href contains "youtu" %}{% assign _type = "動画" %}{% else %}{% assign _type = "記事" %}{% endif %}{{ _date }} {{ _type }} [{{ _title }}]({{ _href }}) を公開しました。
 - 📝 技術アウトプット
     - [技術アウトプット一覧](output.md)
     - {% assign _op = site.pages | where: "path", "output.md" | first %}{% assign _count = _op.content | split: "<a href=" | size | minus: 1 %}{{ site.time | date: "%Y/%m/%d" }} の時点でのアウトプット数: {{ _count }}個
