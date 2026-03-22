@@ -135,6 +135,8 @@
       display: flex;
       flex-direction: column;
       transition: transform .2s, box-shadow .2s;
+      position: relative;
+      cursor: pointer;
     }
     .card:hover {
       transform: translateY(-4px);
@@ -224,6 +226,11 @@
       flex: 1;
     }
     .card-title:hover { color: #5b5ef4; }
+    .card-title::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
 
     .card-note {
       font-size: 11px;
