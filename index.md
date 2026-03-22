@@ -22,7 +22,7 @@
     - 2025/07/26 ブログ記事 [『FRAVIA: The Art of Searching』を読む](https://speakerdeck.com/meow_noisy/fravia-the-art-of-searching-wodu-mu) を公開しました。
 - 📝 技術アウトプット
     - [技術アウトプット一覧](output.md)
-    - 2025/08/12 の時点でのアウトプット数: 81個
+    - {% assign _op = site.pages | where: "path", "output.md" | first %}{% assign _count = _op.content | split: "<a href=" | size | minus: 1 %}{{ site.time | date: "%Y/%m/%d" }} の時点でのアウトプット数: {{ _count }}個
 - 👨‍💻 個人開発
     - [開発物一覧](/my_products/my_products.md)
 - 🎉  受賞
