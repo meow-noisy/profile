@@ -57,6 +57,10 @@
       padding: 3px 12px;
       border-radius: 20px;
     }
+    .stat-highlight {
+      color: rgba(255,255,255,.85);
+      background: rgba(255,255,255,.15);
+    }
 
     /* ── Controls ── */
     .controls {
@@ -78,10 +82,19 @@
     }
     .search-box:focus { border-color: #5b5ef4; }
 
-    .category-filters {
+    .controls-row {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .controls-row:last-child { margin-bottom: 0; }
+    .controls-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #999;
+      white-space: nowrap;
     }
     .filter-btn {
       padding: 5px 14px;
@@ -98,6 +111,23 @@
     .filter-btn.active {
       background: #5b5ef4;
       border-color: #5b5ef4;
+      color: #fff;
+    }
+    .sort-btn {
+      padding: 5px 14px;
+      border: 1.5px solid #ddd;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      background: #fff;
+      color: #555;
+      transition: all .15s;
+    }
+    .sort-btn:hover { border-color: #e8a030; color: #e8a030; transform: translateY(-1px); }
+    .sort-btn.active {
+      background: #e8a030;
+      border-color: #e8a030;
       color: #fff;
     }
 
@@ -274,23 +304,29 @@
     <h1 class="page-title">{{ page.title | default: "技術アウトプットまとめ" }}</h1>
     <p class="page-subtitle">{{ page.description | default: site.description }}</p>
     <div class="stats">
-      <span class="stat" id="count-badge">— 件</span>
+      <span class="stat stat-highlight" id="total-badge">読込中...</span>
+      <span class="stat" id="count-badge">表示中: — 件</span>
     </div>
   </div>
 </header>
 
 <div class="controls">
   <input type="search" class="search-box" id="search-input" placeholder="記事タイトルや日付で検索...">
-  <div class="category-filters" id="filters">
-    <button class="filter-btn active" data-cat="all">すべて</button>
-    <button class="filter-btn" data-cat="osint">OSINT・デジタル調査</button>
-    <button class="filter-btn" data-cat="security">セキュリティ</button>
-    <button class="filter-btn" data-cat="ml-prod">機械学習・MLOps</button>
-    <button class="filter-btn" data-cat="ml-art">ML×創作</button>
-    <button class="filter-btn" data-cat="ml-other">機械学習その他</button>
-    <button class="filter-btn" data-cat="dev">個人開発</button>
-    <button class="filter-btn" data-cat="cloud">クラウド</button>
-    <button class="filter-btn" data-cat="misc">未分類</button>
+  <div class="controls-row">
+    <span class="controls-label">種類:</span>
+    <div id="type-filters">
+      <button class="filter-btn active" data-type="all">🗂️ すべて</button>
+      <button class="filter-btn" data-type="article">📝 記事</button>
+      <button class="filter-btn" data-type="slide">🎤 スライド</button>
+      <button class="filter-btn" data-type="video">▶️ 動画</button>
+    </div>
+  </div>
+  <div class="controls-row">
+    <span class="controls-label">並び順:</span>
+    <div id="sort-controls">
+      <button class="sort-btn active" data-sort="category">カテゴリ順</button>
+      <button class="sort-btn" data-sort="newest">最新順</button>
+    </div>
   </div>
 </div>
 
@@ -305,6 +341,31 @@
 
 <script>
 // ── markdown から記事データを解析 ──────────────────────────────────────
+const SITE_ICON  = { speakerdeck:'🎤', hatena:'📝', qiita:'✍️', youtube:'▶️', slideshare:'📊', other:'🔗' };
+const SITE_LABEL = { speakerdeck:'Slide', hatena:'Blog', qiita:'Qiita', youtube:'Video', slideshare:'Slide', other:'Link' };
+
+function siteOf(url) {
+  if (url.includes('speakerdeck.com')) return 'speakerdeck';
+  if (url.includes('hatenablog.com'))  return 'hatena';
+  if (url.includes('qiita.com'))       return 'qiita';
+  if (url.includes('youtu'))           return 'youtube';
+  if (url.includes('slideshare.net'))  return 'slideshare';
+  return 'other';
+}
+
+function typeOf(url) {
+  const site = siteOf(url);
+  if (site === 'speakerdeck' || site === 'slideshare') return 'slide';
+  if (site === 'youtube') return 'video';
+  return 'article';
+}
+
+function parseDate(str) {
+  if (!str) return new Date(0);
+  const parts = str.split('/').map(Number);
+  return new Date(parts[0], (parts[1] || 1) - 1, parts[2] || 1);
+}
+
 function catFromHeading(text) {
   if (/OSINT|デジタル調査/.test(text)) return 'osint';
   if (/情報セキュリティ/.test(text))   return 'security';
@@ -352,6 +413,7 @@ function parseArticles() {
         title: link.textContent.trim(),
         url: link.href,
         cat: currentCat,
+        type: typeOf(link.href),
         note,
       });
     });
@@ -375,31 +437,20 @@ const CAT_LABELS = {
 };
 const CAT_ORDER = ['osint','security','ml-prod','ml-art','ml-other','dev','cloud','misc'];
 
-const SITE_ICON  = { speakerdeck:'🎤', hatena:'📝', qiita:'✍️', youtube:'▶️', slideshare:'📊', other:'🔗' };
-const SITE_LABEL = { speakerdeck:'Slide', hatena:'Blog', qiita:'Qiita', youtube:'Video', slideshare:'Slide', other:'Link' };
-
-function siteOf(url) {
-  if (url.includes('speakerdeck.com')) return 'speakerdeck';
-  if (url.includes('hatenablog.com'))  return 'hatena';
-  if (url.includes('qiita.com'))       return 'qiita';
-  if (url.includes('youtu'))           return 'youtube';
-  if (url.includes('slideshare.net'))  return 'slideshare';
-  return 'other';
-}
-
 function ytId(url) {
   const m = url.match(/(?:youtu\.be\/|[?&]v=)([^&?#]+)/);
   return m ? m[1] : null;
 }
 
-let activeCat = 'all';
+let activeType = 'all';
+let sortMode = 'category';
 let searchQ = '';
 
 function filtered() {
   return ARTICLES.filter(a => {
-    const c = activeCat === 'all' || a.cat === activeCat;
+    const t = activeType === 'all' || a.type === activeType;
     const s = !searchQ || a.title.toLowerCase().includes(searchQ) || a.date.includes(searchQ);
-    return c && s;
+    return t && s;
   });
 }
 
@@ -428,7 +479,8 @@ function cardHTML(a) {
 
 function render() {
   const list = filtered();
-  document.getElementById('count-badge').textContent = list.length + ' 件';
+  document.getElementById('total-badge').textContent = `総アウトプット数: ${ARTICLES.length} 件`;
+  document.getElementById('count-badge').textContent = `表示中: ${list.length} 件`;
   const main = document.getElementById('main');
 
   if (list.length === 0) {
@@ -436,13 +488,17 @@ function render() {
     return;
   }
 
-  const grouped = {};
-  list.forEach(a => { (grouped[a.cat] = grouped[a.cat] || []).push(a); });
-
-  main.innerHTML = CAT_ORDER.filter(c => grouped[c]).map(c =>
-    `<h2 class="section-heading">${CAT_LABELS[c]} — ${grouped[c].length} 件</h2>` +
-    `<div class="cards-grid">${grouped[c].map(cardHTML).join('')}</div>`
-  ).join('');
+  if (sortMode === 'newest') {
+    const sorted = [...list].sort((a, b) => parseDate(b.date) - parseDate(a.date));
+    main.innerHTML = `<div class="cards-grid">${sorted.map(cardHTML).join('')}</div>`;
+  } else {
+    const grouped = {};
+    list.forEach(a => { (grouped[a.cat] = grouped[a.cat] || []).push(a); });
+    main.innerHTML = CAT_ORDER.filter(c => grouped[c]).map(c =>
+      `<h2 class="section-heading">${CAT_LABELS[c]} — ${grouped[c].length} 件</h2>` +
+      `<div class="cards-grid">${grouped[c].map(cardHTML).join('')}</div>`
+    ).join('');
+  }
 
   lazyLoad();
 }
@@ -536,10 +592,17 @@ function applyThumb(img, placeholder, src) {
   img.src = src;
 }
 
-document.getElementById('filters').addEventListener('click', e => {
+document.getElementById('type-filters').addEventListener('click', e => {
   if (!e.target.matches('.filter-btn')) return;
-  activeCat = e.target.dataset.cat;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === activeCat));
+  activeType = e.target.dataset.type;
+  document.querySelectorAll('#type-filters .filter-btn').forEach(b => b.classList.toggle('active', b.dataset.type === activeType));
+  render();
+});
+
+document.getElementById('sort-controls').addEventListener('click', e => {
+  if (!e.target.matches('.sort-btn')) return;
+  sortMode = e.target.dataset.sort;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.toggle('active', b.dataset.sort === sortMode));
   render();
 });
 
