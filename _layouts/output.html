@@ -324,8 +324,8 @@
   <div class="controls-row">
     <span class="controls-label">並び順:</span>
     <div id="sort-controls">
-      <button class="sort-btn active" data-sort="category">カテゴリ順</button>
-      <button class="sort-btn" data-sort="newest">最新順</button>
+      <button class="sort-btn active" data-sort="newest">最新順</button>
+      <button class="sort-btn" data-sort="category">カテゴリ順</button>
     </div>
   </div>
 </div>
@@ -443,7 +443,7 @@ function ytId(url) {
 }
 
 let activeType = 'all';
-let sortMode = 'category';
+let sortMode = 'newest';
 let searchQ = '';
 
 function filtered() {
