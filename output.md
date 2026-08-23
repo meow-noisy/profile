@@ -33,7 +33,7 @@ description: OSINT CTF、機械学習、個人開発についての技術ブロ�
 14. 2024/01/28 [検索したいキーワードを複数の検索エンジンで一斉に検索できるchrome拡張機能を作ろう](https://meow-memow.hatenablog.com/entry/2024/01/28/151724)
 15. 2023/12/03 [ボツ問 "mural(rev1)" 解説](https://speakerdeck.com/meow_noisy/botuwen-mural-rev1-jie-shuo)
     - Open xINT CTF 2023の作問に携わった際にお蔵入りにした問題の紹介です。
-16. 2023/8/26 [Open xINT CTFで出題された寿司キットの食レポ](https://meow-memow.hatenablog.com/entry/2023/08/26/110942)
+16. 2023/08/26 [Open xINT CTFで出題された寿司キットの食レポ](https://meow-memow.hatenablog.com/entry/2023/08/26/110942)
 17. 2023/08/16 [2023年のRecon Village CTF ふりかえりメモ](https://meow-memow.hatenablog.com/entry/2023/08/16/183327)
 18. 2023/03/12 [2月学んだこと紹介](https://speakerdeck.com/meow_noisy/2yue-xue-ndakotoshao-jie)
     - Twaybackの紹介
