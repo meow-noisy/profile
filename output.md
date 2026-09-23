@@ -97,6 +97,7 @@ description: OSINT CTF、機械学習、個人開発についての技術ブロ�
 
 ### その他の機械学習に関するアウトプット
 
+1. 2026/09/23 [【論文メモ】Anything in Any Scene: Photorealistic Video Object Insertion](https://meow-memow.hatenablog.com/entry/2026/09/23/105033)
 1. 2026/08/22 [【論文メモ】Mission: Impossible - Image Based Geolocation with Large Vision Language Models](https://meow-memow.hatenablog.com/entry/2026/08/22/181705)
 1. 2020/12/29 [PyTorchのnn.ConvTranspose2dに与えるパラメータは畳み込みから逆算して考える](https://meow-memow.hatenablog.com/entry/2020/12/29/160019)
 2. 2020/10/10 [機械学習のTrainerのクラス図を写経して高解像度にした](https://meow-memow.hatenablog.com/entry/2020/10/10/163856)
