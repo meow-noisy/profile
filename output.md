@@ -6,6 +6,7 @@ description: OSINT CTF、機械学習、個人開発についての技術ブロ�
 
 ## ■ デジタル調査, OSINT CTF, OpSec
 
+1. 2026/10/22 [【論文メモ】Large-scale online deanonymization with LLMs](https://meow-memow.hatenablog.com/entry/2026/10/22/184337)
 1. 2026/04/25 [ShareTrace 内部処理の調査](https://speakerdeck.com/meow_noisy/st)
 1. 2026/03/21 [GitFive内部処理の調査](https://speakerdeck.com/meow_noisy/gf)
 1. 2026/02/22 [バニラVisaギフトカードを棄てるのは結構大変](https://speakerdeck.com/meow_noisy/disposing-of-vvgift-is-a-pain)
